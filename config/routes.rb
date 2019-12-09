@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "courses#index"
   # Routes for the Course resource:
 
   # CREATE
