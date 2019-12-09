@@ -61,6 +61,14 @@ class CoursesController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @course = Course.find(params.fetch("id_to_remove"))
+
+    @course.destroy
+
+    redirect_to("/users/#{@course.user_id}", notice: "Course deleted successfully.")
+  end
+
   def destroy_row
     @course = Course.find(params.fetch("id_to_remove"))
 
