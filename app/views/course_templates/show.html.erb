@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Course #<%= @course.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/courses" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link course start -->
+      <div class="col">
+        <a href="/courses/<%= @course.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit course
+        </a>
+      </div>
+      <!-- Edit link course end -->
+
+      <!-- Delete link course start -->
+      <div class="col">
+        <a href="/delete_course/<%= @course.id %>" class="btn btn-block btn-outline-secondary">
+          Delete course
+        </a>
+      </div>
+      <!-- Delete link course end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @course.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Starts at
+      </dt>
+      <!-- Display starts_at start -->
+      <dd>
+        <%= @course.starts_at %>
+      </dd>
+      <!-- Display starts_at end -->
+
+      <dt>
+        Ends at
+      </dt>
+      <!-- Display ends_at start -->
+      <dd>
+        <%= @course.ends_at %>
+      </dd>
+      <!-- Display ends_at end -->
+
+      <dt>
+        Message sent
+      </dt>
+      <!-- Display message_sent start -->
+      <dd>
+        <%= @course.message_sent %>
+      </dd>
+      <!-- Display message_sent end -->
+
+      <dt>
+        Professor
+      </dt>
+      <!-- Display professor start -->
+      <dd>
+        <%= @course.professor %>
+      </dd>
+      <!-- Display professor end -->
+
+      <dt>
+        Location
+      </dt>
+      <!-- Display location start -->
+      <dd>
+        <%= @course.location %>
+      </dd>
+      <!-- Display location end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@course.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@course.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
