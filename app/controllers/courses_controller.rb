@@ -45,7 +45,7 @@ class CoursesController < ApplicationController
   def update_row
     @course = Course.find(params.fetch("id_to_modify"))
 
-    @course.user_id = params.fetch("user_id")
+    
     @course.starts_at = params.fetch("starts_at")
     @course.ends_at = params.fetch("ends_at")
     @course.message_sent = params.fetch("message_sent")
