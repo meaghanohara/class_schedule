@@ -74,7 +74,11 @@
 
         <!-- Display course.user_id start -->
         <td>
-          <%= course.user.email %>
+          <% if course.user.present? %>
+            <a href="/users/<%= course.user.id %>">
+              <%= course.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display course.user_id end -->
 
